@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+data/
+config/config.json
+config/whitelist.json
+config/contacts.json   
