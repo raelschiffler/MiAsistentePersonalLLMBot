@@ -1,0 +1,16 @@
+[Unit]
+Description=LLM Telegram Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=debian
+WorkingDirectory=/home/debian/Developer/bots/MiAsistentePersonalLLMBot
+ExecStart=/home/debian/Developer/bots/MiAsistentePersonalLLMBot/venv/bin/python -m bot.main
+Restart=on-failure
+RestartSec=5
+KillMode=group
+
+[Install]
+WantedBy=multi-user.target   
